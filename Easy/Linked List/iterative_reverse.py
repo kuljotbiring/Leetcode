@@ -22,14 +22,17 @@ Output: []
 #         self.next = next
 
 
+# Time complexity is O(n) and memory complexity is O(1) since just pointers
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         curr = head
         prev = None
 
+        # keep going until end of the list
         while curr:
-            next = curr.next
+            nxt = curr.next
+            # shift pointers
             curr.next = prev
             prev = curr
-            curr = next
+            curr = nxt
         return prev

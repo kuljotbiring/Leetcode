@@ -22,6 +22,7 @@ Output: []
 #         self.next = next
 
 
+# Time complexity is O(n) and memory complexity is also O(n)
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
