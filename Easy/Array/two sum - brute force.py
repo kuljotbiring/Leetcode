@@ -23,6 +23,7 @@ Output: [0,1]
 """
 
 
+# Time complexity O(n^2).
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         n = len(nums)
