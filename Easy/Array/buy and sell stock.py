@@ -20,10 +20,13 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 
 """
 
+
+# time complexity is 0(n) since this is a two pointer solution scanning array once.
+# Space complexity is O(1) since we just used pointers no extra array
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 
-        #indices for two pointer buy is left, right is sell
+        # indices for two pointer buy is left, right is sell
         buy = 0
         sell = 1
 
@@ -37,7 +40,7 @@ class Solution:
                 # calculate the profit
                 curr_profit = prices[sell] - prices[buy]
                 # check if we now have a bigger profit and update it
-                max(max_profit, curr_profit)
+                max_profit = max(max_profit, curr_profit)
 
             # if it wasn't profitable then the sell value was less, we update buy value to it
             else:
