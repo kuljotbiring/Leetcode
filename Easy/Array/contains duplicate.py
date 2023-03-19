@@ -18,15 +18,16 @@ Output: true
 """
 
 
-# time complexity: O(n^2). Space complexity O(1)
+# time complexity: O(n). Space complexity O(1)
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
-        n = len(nums)
+        duplicate_map = {}
 
-        for i in range(n):
-            for j in range(i + 1, n):
-                if nums[i] == nums[j]:
-                    return True
+        for idx, num in enumerate(nums):
+            if num in duplicate_map:
+                return True
+            else:
+                duplicate_map[num] = idx
+
         return False
-
