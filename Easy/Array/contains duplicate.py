@@ -18,16 +18,18 @@ Output: true
 """
 
 
-# time complexity: O(n). Space complexity O(1)
+# time complexity: O(n). Space complexity O(n) - if hash map is same size of array
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
-        duplicate_map = {}
+        # create an empty set
+        duplicate_set = set()
 
-        for idx, num in enumerate(nums):
-            if num in duplicate_map:
+        # iterate through list and check if number in set - return True if found
+        for num in nums:
+            if num in duplicate_set:
                 return True
-            else:
-                duplicate_map[num] = idx
-
+            # other-wise add number to set
+            duplicate_set.add(num)
+        # duplicate numbers not found
         return False
