@@ -14,6 +14,7 @@ Output: false
 """
 
 
+# Time complexity: O(s + t). Space Complexity: O(s + t)
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         # if both strings are not the same length then not anagram
@@ -21,7 +22,7 @@ class Solution:
             return False
 
         # create two hash maps to count character occurrences
-        # letter: number of occurences
+        # letter: number of occurrences
         s_ltr_hash = {}
         t_ltr_hash = {}
 
