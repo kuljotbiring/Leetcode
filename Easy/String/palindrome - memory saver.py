@@ -24,6 +24,7 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 """
 
 
+# Time complexity: O(n). Space complexity O(1)
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         # set up pointers on either end of string
